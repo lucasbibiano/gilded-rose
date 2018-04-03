@@ -22,6 +22,9 @@ class GildedRose
       increase_quality
 
       @quality = 0 if @days_remaining < 0
+    elsif @name == "Conjured Mana Cake"
+      decrease_quality(2)
+      decrease_quality(2) if @days_remaining < 0
     else
       decrease_quality
       decrease_quality if @days_remaining < 0
